@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tax Calculator NZ</title>
+    <title>Tax Calculator (NZ)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="taxes">
-      <input type="text" placeholder="Enter your earnings here" />
-      <button>Calculate your taxes</button>
-      <div class="tax">Tax :</div>
+    <div class="container">
+      <h1>Tax Calculator</h1>
+      <div class="taxes">
+        <input
+          type="number"
+          id="income-input"
+          placeholder="Enter your earnings here"
+        />
+        <button id="calculate-btn">Calculate your taxes</button>
+        <div class="results">
+          <div class="tax">Tax: $0.00</div>
+          <button id="toggle-breakdown" class="toggle-btn">
+            Show Breakdown
+          </button>
+          <div id="breakdown" class="hidden">
+            <h3>Tax Breakdown:</h3>
+            <ul id="calculations-list"></ul>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
